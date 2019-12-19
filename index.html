@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+    <link href="https://fonts.googleapis.com/css?family=Solway&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kalam:700|Righteous&display=swap" rel="stylesheet">
+
+    <title>Chrystel Alinc</title>
+</head>
+
+<body>
+    <!--BROUILLARD-->
+    <img src="./images/mist.png" alt="brume" id="mist">
+
+
+    <!--HEADER-->
+    <div id="jeu">
+        <header>
+            <h2>Chrystel Alinc</h2>
+            <div id="score">
+                <h4>SCORE : </h4>
+                <div id="scoreNumb">0</div>
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="#">Règles</a></li>
+                    <li><a href="#">Mon CV</a></li>
+                    <li><a href="#">Me contacter</a></li>
+                </ul>
+            </nav>
+
+        </header>
+
+        <!--COMPETENCES-->
+        <div id="competences">
+            <img src="images/angular.png" id="angular">
+            <img src="images/javascript.png" id="javascript">
+            <img src="images/html5.png" id="html5">
+            <img src="images/css3.png" id="css3">
+            <img src="images/mongodb.png" id="mongodb">
+            <img src="images/meteor.png" id="meteor">
+            <img src="images/nodejs.png" id="nodejs">
+        </div>
+
+        <!--BLOC INSTRUCTON-->
+        <div id="instruction">
+            <img src="images/blood.png" id="blood">
+            <p id="intro"><span class="bonjour">Bonjour et bienvenue sur mon jeu !</span><br>
+                <br>Chrystel Alinc est une petite développeuse en herbe qui combat des zombies pour développer ses
+                connaissances en développement. A chaque zombie tué, vous débloquerez une compétence. Aidez-la dans son
+                combat pour faire d'elle une développeuse full stack hors pair ! <br>
+                Voici quelques consignes pour menez à bien votre mission :<br>
+                Utiliser les touches de direction <span class="fleche">droite</span> et <span
+                    class="fleche">gauche</span> vous diriger.<br>
+                Utilisez la touche de direction <span class="fleche">vers le bas</span> pour tuer le zombie à coup de
+                hache.<br>
+                <br>
+                <span class="jouer">A vous de jouer !</span>
+            </p>
+            <div class="bouton1">
+                <p><a href="#" id="bouton">PLAY</a></p>
+            </div>
+        </div>
+
+        <!--SPRITE REDNECK-->
+        <div id="container" class="masque">
+            <img src="images/redneck.png" id="contenu" class="sprite" />
+        </div>
+
+        <!--SPRITE ZOMBIE FILLE-->
+        <div id="containerZombieGirl" class="masqueGirl">
+            <img src="images/zombie-girl2.png" id="contenuZombieGirl" class="spriteGirl">
+        </div>
+
+        <!--SPRITE ZOMBIE BOY-->
+        <div id="containerZombieBoy" class="masqueBoy">
+            <img src="images/zombie-boy.png" id="contenuZombieBoy" class="spriteBoy">
+        </div>
+        <!--SPRITE ZOMBIE CASSEROLE-->
+        <div id="containerZombiePoele" class="masquePoele">
+            <img src="images/zombie-poele.png" id="contenuZombiePoele" class="spritePoele">
+        </div>
+
+        <!--SPRITE ZOMBIE MOMIE-->
+        <div id="containerZombieMomie" class="masqueMomie">
+            <img src="images/zombie-momie.png" id="contenuZombieMomie" class="spriteMomie">
+        </div>
+
+        <!--SPRITE ZOMBIE FRANKENSTEIN-->
+        <div id="containerZombieFrank" class="masqueFrank">
+            <img src="images/zombie-frank.png" id="contenuZombieFrank" class="spriteFrank">
+        </div>
+        <!--GAME OVER-->
+
+        <div id="gameOver"></div>
+        <div>
+            <img id="zomb" src="images/game-over.png" alt="game over">
+        </div>
+        <p><a href="#" id="boutonAccueil">ACCUEIL</a></p>
+    </div>
+    </div>
+
+    </div>
+
+</body>
+<script src="js/zombie.js"></script>
+
+</html>
