@@ -9,9 +9,9 @@ window.onload = function () {
         document.getElementById('blood').style.display = 'none';
         document.getElementById('intro').style.display = 'none';
         document.getElementById('bouton').style.display = 'none';
-        // Masque le score
-        // document.getElementById('score').style.display = 'block';
-
+       
+        // Affiche le score
+        document.getElementById('score').style.display = 'block';
         //Remplace le background
         document.body.style.backgroundImage = 'none';
         document.body.style.backgroundImage = "url('./images/decor.jpg')";
@@ -32,11 +32,12 @@ window.onload = function () {
         //affiche le Zombie Frankenstein
         document.getElementById('containerZombieFrank').style.display = 'block';
         document.getElementById('contenuZombieFrank').style.display = 'block';
-        //affiche le Zombie Frankenstein
+        //affiche le Zombie Boy
         document.getElementById('containerZombieBoy').style.display = 'block';
         document.getElementById('contenuZombieBoy').style.display = 'block';
         //Affiche le score
         // document.getElementById('score').style.display = 'block';
+
         animationPersonnages();
     };
 
@@ -373,9 +374,6 @@ window.onload = function () {
     var masqueAvancer = masque.offsetLeft;
     var masqueTop = 486;
 
-
-
-
     window.onkeydown = function (event) {
 
         var code = event.keyCode;
@@ -388,7 +386,7 @@ window.onload = function () {
 
         switch (code) {
             case 39: //droite
-                masqueAvancer += 10;
+                masqueAvancer += 15;
                 sprite.style.transform = "scaleX(1)";
                 if (i == 6) {
                     i = 0;
@@ -402,7 +400,7 @@ window.onload = function () {
 
             case 37: //gauche
                 if (masqueAvancer > 0) {
-                    masqueAvancer -= 10;
+                    masqueAvancer -= 15;
                     sprite.style.transform = "scaleX(-1)";
                     if (i == 6) {
                         i = 0;
@@ -436,7 +434,7 @@ window.onload = function () {
                     masque.style.top = masqueTop + "px";
                 }
                 break;
-            case 13:
+            case 32:
 
                 //Mouvement de la hache
                 // if (k == 13) {
@@ -460,11 +458,9 @@ window.onload = function () {
 
                 }, 30);
 
-            
+
                 // COLLISIONS
                 // Collision Zombie Girl  
-                
-                var deplacementMasque = document.getElementById('containerZombieGirl');
                 var coorRedneck = masque.getBoundingClientRect();
                 var coorZombieGirl = masqueGirl.getBoundingClientRect();
 
@@ -473,14 +469,14 @@ window.onload = function () {
                     coorRedneck.top < coorZombieGirl.top + coorZombieGirl.height &&
                     coorRedneck.height + coorRedneck.top > coorZombieGirl.top) {
                     // console.log('collision');
-                    leftZombieGirl = 1900;
+                    //Nouvel emplacement du zombie
+                    leftZombieGirl = 2500;
                     resultScore = parseInt(monScore.innerHTML, 0) + 50;
                     monScore.innerHTML = resultScore;
                 }
 
 
                 //Collision Zombie avec la Poele
-                var deplacementMasqueZombiePoele = document.getElementById('containerZombiePoele');
                 var coorRedneck = masque.getBoundingClientRect();
                 var coorZombiePoele = masqueZombiePoele.getBoundingClientRect();
 
@@ -489,15 +485,14 @@ window.onload = function () {
                     coorRedneck.top < coorZombiePoele.top + coorZombiePoele.height &&
                     coorRedneck.height + coorRedneck.top > coorZombiePoele.top) {
                     // console.log('collision');
-                    leftZombiePoele = 2500;
+                    //Nouvel emplacement du zombie
+                    leftZombiePoele = 1950;
                     resultScore = parseInt(monScore.innerHTML, 0) + 50;
                     monScore.innerHTML = resultScore;
                 }
 
 
                 //collision Zombie Momie
-                var deplacementMasqueZombieMomie = document.getElementById('containerZombieMomie');
-
                 var coorRedneck = masque.getBoundingClientRect();
                 var coorZombieMomie = masqueZombieMomie.getBoundingClientRect();
 
@@ -506,15 +501,14 @@ window.onload = function () {
                     coorRedneck.top < coorZombieMomie.top + coorZombieMomie.height &&
                     coorRedneck.height + coorRedneck.top > coorZombieMomie.top) {
                     // console.log('collision');
-                    leftZombieMomie = 3000;
+                    //Nouvel emplacement du zombie
+                    leftZombieMomie = 2000;
                     resultScore = parseInt(monScore.innerHTML, 0) + 50;
                     monScore.innerHTML = resultScore;
                 }
 
 
-                //collision Zombie Frankenstein
-                var deplacementMasqueZombieFrank = document.getElementById('containerZombieFrank');
-
+                //collision Zombie Frankenstein                
                 var coorRedneck = masque.getBoundingClientRect();
                 var coorZombieFrank = masqueZombieFrank.getBoundingClientRect();
 
@@ -523,6 +517,7 @@ window.onload = function () {
                     coorRedneck.top < coorZombieFrank.top + coorZombieFrank.height &&
                     coorRedneck.height + coorRedneck.top > coorZombieFrank.top) {
                     // console.log('collision');
+                    //Nouvel emplacement du zombie
                     leftZombieFrank = 3250;
                     resultScore = parseInt(monScore.innerHTML, 0) + 50;
                     monScore.innerHTML = resultScore;
@@ -530,8 +525,6 @@ window.onload = function () {
 
 
                 //collision Zombie Boy
-                var deplacementMasqueZombieBoy = document.getElementById('containerZombieBoy');
-
                 var coorRedneck = masque.getBoundingClientRect();
                 var coorZombieBoy = masqueZombieBoy.getBoundingClientRect();
 
@@ -540,6 +533,7 @@ window.onload = function () {
                     coorRedneck.top < coorZombieBoy.top + coorZombieBoy.height &&
                     coorRedneck.height + coorRedneck.top > coorZombieBoy.top) {
                     // console.log('collision');
+                    //Nouvel emplacement du zombie
                     leftZombieBoy = 3600;
                     resultScore = parseInt(monScore.innerHTML, 0) + 50;
                     monScore.innerHTML = resultScore;
@@ -549,60 +543,72 @@ window.onload = function () {
         };
     };
 
-//Gestion de score
-var monScore = document.getElementById("scoreNumb");
-var resultScore = 0;             
+    //Gestion de score
+    var monScore = document.getElementById("scoreNumb");
+    var resultScore = 0;
 
-function testScore() {
-   
+    function afficheScore() {
 
-    if (resultScore >= 150) {
-        console.log('condition = 150')
-        var html5 = document.getElementById('html5')
-        html5.style.display = 'block';
+        if (resultScore >= 150) {
+            console.log('condition = 150')
+            var html5 = document.getElementById('html5')
+            html5.style.display = 'block';
+        }
+        if (resultScore >= 300) {
+            document.getElementById('css3').style.display = 'block';
+        }
+        if (resultScore >= 450) {
+            document.getElementById('javascript').style.display = 'block';
+        }
+        if (resultScore >= 600) {
+            document.getElementById('angular').style.display = 'block';
+        }
+        if (resultScore >= 750) {
+            document.getElementById('mongodb').style.display = 'block';
+        }
+        if (resultScore >= 950) {
+            document.getElementById('nodejs').style.display = 'block';
+        }
+        if (resultScore >= 1100) {
+            document.getElementById('meteor').style.display = 'block';
+            setTimeout(function () {
+
+                //Affiche la page You Win
+                document.getElementById('gameWin').style.display = 'block';
+                document.getElementById('zombWin').style.display = 'block';
+                document.getElementById('boutonCV').style.display = 'block';
+                //cache la div gameOver
+                document.getElementById('gameOver').style.display = "none";
+                document.getElementById('zomb').style.display = "none";
+                document.getElementById('boutonAccueil').style.display = "none";
+
+            }, 2000);
+        }
+
+        requestAnimationFrame(afficheScore);
     }
-    if (resultScore >= 300) {
-        document.getElementById('css3').style.display = 'block';
-    }
-    if (resultScore >= 450) {
-        document.getElementById('javascript').style.display = 'block';
-    }
-    if (resultScore >= 600) {
-        document.getElementById('angular').style.display = 'block';
-    }
-    if (resultScore >= 750) {
-        document.getElementById('mongodb').style.display = 'block';
-    }
-    if (resultScore >= 950) {
-        document.getElementById('nodejs').style.display = 'block';
-    }
-    if (resultScore >= 1100) {
-        document.getElementById('meteor').style.display = 'block';
-        setTimeout(function(){ 
-            document.getElementById('blood').style.display = 'block';
-         }, 3000);
-    }  
+    afficheScore();
+    //left des zombies début animation
+    var leftZombieGirl = 1900;
+    var leftZombiePoele = 1850;
+    var leftZombieMomie = 2000;
+    var leftZombieBoy = 2300;
+    var leftZombieFrank = 2800;
     
-    requestAnimationFrame(testScore);
-}
-testScore();
 
-    var leftZombieGirl = 1200;
-    var leftZombiePoele = 1400;
-    var leftZombieMomie = 1600;
-    var leftZombieFrank = 1800;
-    var leftZombieBoy = 2000;
+    //limite de l'écran : left = 0
+    var limite = 0;
 
-
-    var limite = 0; //new
+    //indices pour l'incrémentation des déplacements
     var j = 0;
     var l = 0;
     var m = 0;
     var g = 0;
     var d = 0;
 
+    //Animation des zombies
     var animationPersonnages = function () {
-        // Zombie girl déplacement
+        // Zombie girl : arrêt de l'animation quand rencontre left écran
         var deplacementMasque = document.getElementById('containerZombieGirl');
         var arreter = window.setInterval(function () {
             if (leftZombieGirl < limite) {
@@ -616,6 +622,7 @@ testScore();
                     document.location.reload();
                 }
             }
+            //déplacement sprite zombie Girl
             leftZombieGirl -= 8;
             if (j == 0) {
                 j = 9;
@@ -626,9 +633,9 @@ testScore();
             deplacementMasque.style.left = leftZombieGirl + "px";
             spriteGirl.style.left = decompositionDuSpriteGirl.persoGirl[j--].leftDeImage;
 
-        }, 100);
+        }, 20);
 
-        //Zombie poele déplacement
+         // Zombie Poele : arrêt de l'animation quand rencontre left écran
         var deplacementMasqueZombiePoele = document.getElementById('containerZombiePoele');
         var arreterZombiePoele = window.setInterval(function () {
             if (leftZombiePoele < limite) {
@@ -642,6 +649,7 @@ testScore();
                     document.location.reload();
                 }
             }
+            //Zombie poele sprite déplacement 
             leftZombiePoele -= 8;
             if (l == 0) {
                 l = 6;
@@ -652,9 +660,9 @@ testScore();
             deplacementMasqueZombiePoele.style.left = leftZombiePoele + "px";
             spriteZombiePoele.style.left = decompositionDuSpriteZombiePoele.persoZombiePoele[l--].leftDeImage;
 
-        }, 100);
+        }, 60);
 
-        // // Zombie momie déplacement
+         // Zombie Momie : arrêt de l'animation quand rencontre left écran
         var deplacementMasqueZombieMomie = document.getElementById('containerZombieMomie');
         var arreterZombieMomie = window.setInterval(function () {
             if (leftZombieMomie < limite) {
@@ -668,6 +676,7 @@ testScore();
                     document.location.reload();
                 }
             }
+            // Zombie momie sprite déplacement
             leftZombieMomie -= 8;
             if (m == 0) {
                 m = 6;
@@ -678,9 +687,9 @@ testScore();
             deplacementMasqueZombieMomie.style.left = leftZombieMomie + "px";
             spriteZombieMomie.style.left = decompositionDuSpriteZombieMomie.persoZombieMomie[m--].leftDeImage;
 
-        }, 100);
+        }, 80);
 
-        // // Zombie Frankenstein déplacement
+         // Zombie Frankenstein : arrêt de l'animation quand rencontre left écran
         var deplacementMasqueZombieFrank = document.getElementById('containerZombieFrank');
         var arreterZombieFrank = window.setInterval(function () {
             if (leftZombieFrank < limite) {
@@ -694,6 +703,7 @@ testScore();
                     document.location.reload();
                 }
             }
+            // Zombie Frankenstein sprite déplacement
             leftZombieFrank -= 8;
             if (g == 0) {
                 g = 6;
@@ -704,9 +714,9 @@ testScore();
             deplacementMasqueZombieFrank.style.left = leftZombieFrank + "px";
             spriteZombieFrank.style.left = decompositionDuSpriteZombieFrank.persoZombieFrank[g--].leftDeImage;
 
-        }, 200);
+        }, 80);
 
-        // // Zombie Boy déplacement
+         // Zombie Boy : arrêt de l'animation quand rencontre left écran
         var deplacementMasqueZombieBoy = document.getElementById('containerZombieBoy');
         var arreterZombieBoy = window.setInterval(function () {
             if (leftZombieBoy < limite) {
@@ -720,6 +730,7 @@ testScore();
                     document.location.reload();
                 }
             }
+            // Zombie Boy sprite déplacement
             leftZombieBoy -= 8;
             if (d == 0) {
                 d = 6;
@@ -730,36 +741,31 @@ testScore();
             deplacementMasqueZombieBoy.style.left = leftZombieBoy + "px";
             spriteZombieBoy.style.left = decompositionDuSpriteZombieBoy.persoZombieBoy[d--].leftDeImage;
 
-        }, 100);
+        }, 20);
     };
 
-    // var score = 0;
-    // score = score + 100;
-    // var scoreKill = function() {
-    //     if(score == 2000) {
-    //         alert("YOU WIN, CONGRATULATIONS!");
-    //         document.location.reload();
-    //         clearInterval(interval); // 
-    //     }
-    // };
+    //Pour retourner à l'accueil quand on clique sur le bouton accueil
+    boutonAccueil.onclick = function () {
+        document.location.reload();
+    }
+
+    //Pour retourner à l'accueuil en cliquant sur Accueuil dans le menu
+    menuAccueil.onclick = function () {
+        document.location.reload();
+    }
 
 
 
+    //Pour voir les règles
+    regles.onclick = function () {
+        document.getElementById('regleJeu').style.display = "block";
+        document.getElementById('reglesDuJeu').style.display = "block";    
+    }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-    //COLLISIONS
-
+    //Pour voir mon CV
+    var voirMonCV = document.getElementById('boutonCV')
+    voirMonCV.onclick = function () {
+        window.open('cv-chrystel-alinc.pdf');
+    }  
 };

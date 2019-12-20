@@ -20,16 +20,16 @@
         <header>
             <h2>Chrystel Alinc</h2>
             <div id="score">
-                <h4>SCORE : </h4>
+                <h4>SCORE</h4>
                 <div id="scoreNumb">0</div>
             </div>
 
             <nav>
                 <ul>
-                    <li><a href="#">Accueil</a></li>
-                    <li><a href="#">Règles</a></li>
-                    <li><a href="#">Mon CV</a></li>
-                    <li><a href="#">Me contacter</a></li>
+                    <li><a href="#" id="menuAccueil">Accueil</a></li>
+                    <li><a href="#" id="regles">Règles</a></li>
+                    <li><a href="cv-chrystel-alinc.pdf" id="voirCv">Mon CV</a></li>
+                    <!-- <li><a href="#" id="contact">Me contacter</a></li> -->
                 </ul>
             </nav>
 
@@ -50,20 +50,39 @@
         <div id="instruction">
             <img src="images/blood.png" id="blood">
             <p id="intro"><span class="bonjour">Bonjour et bienvenue sur mon jeu !</span><br>
-                <br>Chrystel Alinc est une petite développeuse en herbe qui combat des zombies pour développer ses
-                connaissances en développement. A chaque zombie tué, vous débloquerez une compétence. Aidez-la dans son
-                combat pour faire d'elle une développeuse full stack hors pair ! <br>
-                Voici quelques consignes pour menez à bien votre mission :<br>
-                Utiliser les touches de direction <span class="fleche">droite</span> et <span
-                    class="fleche">gauche</span> vous diriger.<br>
-                Utilisez la touche de direction <span class="fleche">vers le bas</span> pour tuer le zombie à coup de
+                <br>Je suis Chrystel Alinc, développeuse Full Stack JS junior, et ceci est mon premier projet.
+                Découvrez-moi à travers mon jeu rempli de zombies ! La règle est simple : 
+                A chaque zombie tué, vous gagnerez 50 points. Tous les 150 points, vous débloquerez une compétence. Au bout de 1100 points vous pourrez accèder à mon CV complet. <br>
+                Voici quelques consignes pour mener à bien votre mission :<br>
+                Utilisez les touches de direction <span class="fleche">droite</span>, <span
+                    class="fleche">gauche</span>, <span class="fleche">haut</span> et <span class="fleche">bas</span> pour vous diriger.<br>
+                Utilisez la touche <span class="fleche">Entrée</span> pour tuer les zombies à coup de
                 hache.<br>
-                <br>
+                
                 <span class="jouer">A vous de jouer !</span>
             </p>
             <div class="bouton1">
                 <p><a href="#" id="bouton">PLAY</a></p>
             </div>
+        </div>
+
+        <!--BLOC REGLES DU JEU-->
+        <div id="reglesDuJeu">
+            
+            <p id="regleJeu"><span class="titreJeu">Zombies vs CrazyRedneck </span><br>
+                <br><br>
+                Touches directionnelles :<br>
+                Touche <span class="fleche">droite</span> : pour vous diriger vers la droite.<br>
+                Touche <span class="fleche">gauche</span> : pour vous diriger vers la gauche.<br>
+                Pressez 1 fois la touche <span class="fleche">Entrée</span> : pour 1 coup de hâche.<br>
+                <br>
+                Score :<br>
+                1 zombie tué = 50 points<br>
+                150 pts = débloquent 1 compétence<br>
+                1100 pts = Vous gagnez !<br>
+                Si 1 zombie sort de l'écran, vous avez perdu !
+            </p>
+            
         </div>
 
         <!--SPRITE REDNECK-->
@@ -101,9 +120,15 @@
             <img id="zomb" src="images/game-over.png" alt="game over">
         </div>
         <p><a href="#" id="boutonAccueil">ACCUEIL</a></p>
-    </div>
-    </div>
+    
 
+        <!--YOU WIN-->
+        <div id="gameWin"></div>
+        <div>
+            <img id="zombWin" src="images/you-win.png" alt="you win">
+        </div>
+        <p><a href="#" id="boutonCV">Voir mon CV</a></p>
+        
     </div>
 
 </body>
