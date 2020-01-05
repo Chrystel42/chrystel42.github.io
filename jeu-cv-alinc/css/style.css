@@ -1,0 +1,460 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+    background-image: url('../images/zombie.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+}
+
+#jeu {
+    height: 100%;
+    position: relative;
+    width: 100%;
+}
+
+/*********************************BROUILLARD*********************************/
+
+#mist {
+    animation: brume 25s linear both running;
+    background-size: cover;
+    display: none;
+    opacity: 0.4;
+    position: absolute;
+}
+
+@keyframes brume {
+    from {
+        transform: translateX(-10%);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+
+/*********************************HEADER*********************************/
+header {
+    display: flex;
+    flex-direction: row;
+    font-family: 'Kalam', cursive;
+    height: 90px;
+    justify-content: space-between;
+    text-shadow: 2px 2px 2px black;
+
+}
+
+ul {
+    color: white;
+    display: flex;
+    flex-direction: row;
+    font-size: 2.3em;
+    justify-content: space-around;
+    list-style-type: none;
+    margin-top: 15px;
+    width: 600px;
+}
+
+a:hover {
+    color: red;
+}
+
+
+h2 {
+    color: green;
+    font-size: 2em;
+    font-size: 3em;
+    margin-top: 5px;
+    margin-left: 20px;
+}
+
+nav a {
+    color: green;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+section {
+    height: 908px;
+    width: 100%;
+}
+
+
+/*********************************BLOC INTRO*********************************/
+#instruction {
+    height: 855px;
+    left: 0;
+    margin: auto;
+    position: relative;
+    top: 0;
+    width: 868px;
+}
+
+/*Image tâche de sang*/
+#blood {
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+
+/*Paragraphe intro*/
+.bonjour {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#intro {
+    color: white;
+    font-size: 15px;
+    font-family: 'Solway', serif;
+    height: 350px;
+    left: 21%;
+    line-height: 200%;
+    position: absolute;
+    top: 12%;
+    text-align: center;
+    width: 513px;
+}
+
+
+a#bouton {
+    background-color: rgba(130, 0, 0, 0.5);
+    border-radius: 20px;
+    border: 2px solid red;
+    color: green;
+    font-family: 'Kalam', cursive;
+    font-size: 30px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 40px;
+    padding-right: 40px;
+    position: absolute;
+    right: 40%;
+    text-decoration: none;
+    top: 55%;
+}
+
+.fleche {
+    color: green;
+    font-weight: bold;
+}
+
+a#bouton:hover {
+    background-color: green;
+    color: red;
+}
+
+.jouer {
+    font-size: 20px;
+}
+
+/*********************************BLOC REGLES*********************************/
+#reglesDuJeu {
+    background-color: black;
+    border-radius: 10px;
+    display: none;
+    height: 534px;
+    left: 30%;
+    position: absolute;
+    top: 16%;
+    width: 650px;
+}
+
+#fermer {
+    position: absolute;
+    padding-top: 2%;
+    padding-left: 2%;
+}
+
+.titreJeu {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#regleJeu {
+    color: white;
+    display: none;
+    font-family: 'Solway', serif;
+    font-size: 15px;
+    height: 350px;
+    left: 8%;
+    line-height: 200%;
+    position: relative;
+    top: 11%;
+    text-align: center;
+    width: 513px;
+}
+
+/*********************************COMPETENCES*********************************/
+#competences {
+    left: 10%;
+    width: 100%;
+}
+
+#competences img {
+    display: none;
+}
+
+#competences,
+#angular,
+#javascript,
+#html5,
+#css3,
+#mongodb,
+#meteor,
+#nodejs {
+    position: absolute;
+}
+
+#angular {
+    left: 719px;
+    top: 0;
+}
+
+#javascript {
+    left: 623px;
+    top: 0;
+}
+
+#html5 {
+    left: 428px;
+    top: 0;
+}
+
+#css3 {
+    left: 526px;
+    top: 0;
+}
+
+#mongodb {
+    left: 812px;
+    top: 0;
+}
+
+#meteor {
+    left: -22px;
+    top: 190px;
+}
+
+#nodejs {
+    left: 916px;
+    top: 0px;
+}
+
+/*********************************SPRITES*********************************/
+
+
+#container,
+#containerZombieGirl,
+#containerZombiePoele,
+#containerZombieMomie,
+#containerZombieFrank,
+#containerZombieBoy {
+    position: absolute;
+}
+
+#contenu,
+#contenuZombieGirl,
+#contenuZombiePoele,
+#contenuZombieMomie,
+#contenuZombieFrank,
+#contenuZombieBoy {
+    position: relative;
+}
+
+/*REDNECK*/
+#container {
+    display: none;
+    height: 310px;
+    left: 0px;
+    overflow: hidden;
+    top: 449px;
+    width: 340px;
+}
+
+#contenu {
+    left: -17px;
+    top: 54px;
+}
+
+/*ZOMBIE GIRL*/
+#containerZombieGirl {
+    display: none;
+    height: 189px;
+    left: 1900px;
+    overflow: hidden;
+    top: 40%;
+    width: 120px;
+}
+
+#contenuZombieGirl {
+    left: 0px;
+    top: -21px;
+}
+
+/*ZOMBIE POELE*/
+#containerZombiePoele {
+    display: none;
+    height: 184px;
+    left: 1850px;
+    overflow: hidden;
+    top: 48%;
+    width: 153px;
+}
+
+#contenuZombiePoele {
+    left: 5px;
+    top: -13px;
+}
+
+/*ZOMBIE MOMIE*/
+#containerZombieMomie {
+    display: none;
+    height: 185px;
+    left: 2000px;
+    overflow: hidden;
+    top: 57%;
+    width: 140px;
+}
+
+#contenuZombieMomie {
+    left: -42px;
+    top: -9px;
+}
+
+/*ZOMBIE FRANKENSTEIN*/
+#containerZombieFrank {
+    /* border: 2px solid pink; */
+    display: none;
+    height: 178px;
+    left: 2800px;
+    overflow: hidden;
+    top: 45%;
+    width: 116px;
+}
+
+#contenuZombieFrank {
+    left: -50px;
+    top: -12px;
+}
+
+/*ZOMBIE BOY*/
+#containerZombieBoy {
+    /* border: 2px solid green; */
+    display: none;
+    height: 186px;
+    left: 2300px;
+    overflow: hidden;
+    top: 61%;
+    width: 146px;
+}
+
+#contenuZombieBoy {
+    left: -46px;
+    top: -13px;
+}
+
+/*SCORE*/
+
+#score {
+    align-items: center;
+    border-radius: 10px;
+    color: #ffff;
+    display: flex;
+    display: none;
+    flex-wrap: nowrap;
+    font-weight: bold;
+    justify-content: space-between;
+    margin: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    width: 300px;
+}
+
+h4,
+#scoreNumb {
+    font-size: 24px;
+    text-shadow: 2px 2px 2px #0fbd23;
+}
+
+/* GAME OVER */
+#gameOver {
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+}
+
+#zomb {
+    display: none;
+    left: 30%;
+    position: absolute;
+    top: 3%;
+}
+
+a#boutonAccueil {
+    background-color: green;
+    border-radius: 20px;
+    border: 2px solid red;
+    color: red;
+    display: none;
+    font-family: 'Kalam', cursive;
+    font-size: 30px;
+    left: 44%;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 40px;
+    padding-right: 40px;
+    position: absolute;
+    text-decoration: none;
+    top: 58%;
+}
+
+
+/* YOU WIN */
+#gameWin {
+    background: black;
+    display: none;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+#zombWin {
+    display: none;
+    left: 30%;
+    position: absolute;
+    top: 3%;
+}
+
+a#boutonCV {
+    background-color: green;
+    border-radius: 20px;
+    border: 2px solid red;
+    color: red;
+    display: none;
+    font-family: 'Kalam', cursive;
+    font-size: 30px;
+    left: 44%;
+    position: absolute;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 40px;
+    padding-right: 40px;
+    text-decoration: none;
+    top: 43%;
+}
