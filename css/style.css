@@ -8,26 +8,26 @@ body {
     background-image: url('../images/zombie.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
-    margin: 0;
-    padding: 0;
     background-size: cover;
+    margin: 0;
     overflow: hidden;
+    padding: 0;
 }
 
 #jeu {
-    width: 100%;
     height: 100%;
     position: relative;
+    width: 100%;
 }
 
 /*********************************BROUILLARD*********************************/
 
 #mist {
-    background-size: cover;
-    position: absolute;
-    opacity: 0.4;
     animation: brume 25s linear both running;
+    background-size: cover;
     display: none;
+    opacity: 0.4;
+    position: absolute;
 }
 
 @keyframes brume {
@@ -45,10 +45,11 @@ body {
 header {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     font-family: 'Kalam', cursive;
-    text-shadow: 2px 2px 2px black;
     height: 90px;
+    justify-content: space-between;
+    text-shadow: 2px 2px 2px black;
+
 }
 
 ul {
@@ -82,65 +83,63 @@ nav a {
 }
 
 section {
-    width: 100%;
     height: 908px;
+    width: 100%;
 }
 
 
 /*********************************BLOC INTRO*********************************/
 #instruction {
-    position: relative;
     height: 855px;
-    width: 868px;
-    margin: auto;
-    top: 0;
     left: 0;
+    margin: auto;
+    position: relative;
+    top: 0;
+    width: 868px;
 }
 
 /*Image tâche de sang*/
 #blood {
+    left: 0;
     position: absolute;
     top: 0;
-    left: 0;
-
 }
 
 /*Paragraphe intro*/
 .bonjour {
-    font-size: 20px;
+    font-size: 24px;
     font-weight: bold;
-
 }
 
 #intro {
-    position: absolute;
+    color: white;
     font-size: 15px;
-    width: 513px;
+    font-family: 'Solway', serif;
     height: 350px;
     left: 21%;
-    top: 24%;
-    color: white;
-    font-family: 'Solway', serif;
-    text-align: center;
     line-height: 200%;
+    position: absolute;
+    top: 12%;
+    text-align: center;
+    width: 513px;
 }
 
 
 a#bouton {
-    font-family: 'Kalam', cursive;
-    position: absolute;
-    text-decoration: none;
-    color: green;
-    font-size: 30px;
     background-color: rgba(130, 0, 0, 0.5);
     border-radius: 20px;
     border: 2px solid red;
-    top: 69%;
-    right: 40%;
+    color: green;
+    font-family: 'Kalam', cursive;
+    font-size: 30px;
     padding-top: 3px;
     padding-bottom: 3px;
     padding-left: 40px;
     padding-right: 40px;
+    position: absolute;
+    right: 40%;
+    text-decoration: none;
+    top: 55%;
 }
 
 .fleche {
@@ -159,14 +158,20 @@ a#bouton:hover {
 
 /*********************************BLOC REGLES*********************************/
 #reglesDuJeu {
-    position: absolute;
     background-color: black;
-    height: 527px;
-    width: 543px;
-    top: 25%;
-    left: 34%;
     border-radius: 10px;
-    display:none;
+    display: none;
+    height: 534px;
+    left: 30%;
+    position: absolute;
+    top: 16%;
+    width: 650px;
+}
+
+#fermer {
+    position: absolute;
+    padding-top: 2%;
+    padding-left: 2%;
 }
 
 .titreJeu {
@@ -175,23 +180,23 @@ a#bouton:hover {
 }
 
 #regleJeu {
-    position: relative;
-    font-size: 15px;
-    width: 513px;
-    height: 350px;
-    left: 3%;
-    top: 11%;
     color: white;
+    display: none;
     font-family: 'Solway', serif;
-    text-align: center;
+    font-size: 15px;
+    height: 350px;
+    left: 8%;
     line-height: 200%;
-    display:none;
+    position: relative;
+    top: 11%;
+    text-align: center;
+    width: 513px;
 }
 
 /*********************************COMPETENCES*********************************/
 #competences {
-    width: 100%;
     left: 10%;
+    width: 100%;
 }
 
 #competences img {
@@ -207,42 +212,41 @@ a#bouton:hover {
 #meteor,
 #nodejs {
     position: absolute;
-
 }
 
 #angular {
-    top: 0;
     left: 719px;
+    top: 0;
 }
 
 #javascript {
-    top: 0;
     left: 623px;
+    top: 0;
 }
 
 #html5 {
-    top: 0;
     left: 428px;
+    top: 0;
 }
 
 #css3 {
-    top: 0;
     left: 526px;
+    top: 0;
 }
 
 #mongodb {
-    top: 0;
     left: 812px;
+    top: 0;
 }
 
 #meteor {
-    top: 230px;
-    left: -5px;
+    left: -22px;
+    top: 190px;
 }
 
 #nodejs {
-    top: 0px;
     left: 916px;
+    top: 0px;
 }
 
 /*********************************SPRITES*********************************/
@@ -268,112 +272,112 @@ a#bouton:hover {
 
 /*REDNECK*/
 #container {
-    top: 449px;
-    left: 0px;
-    height: 310px;
-    width: 340px;
-    overflow: hidden;
     display: none;
+    height: 310px;
+    left: 0px;
+    overflow: hidden;
+    top: 449px;
+    width: 340px;
 }
 
 #contenu {
-    top: 54px;
     left: -17px;
+    top: 54px;
 }
 
 /*ZOMBIE GIRL*/
 #containerZombieGirl {
-    top: 51%;
-    left: 1900px;
-    height: 189px;
-    width: 120px;
-    overflow: hidden;
     display: none;
+    height: 189px;
+    left: 1900px;
+    overflow: hidden;
+    top: 40%;
+    width: 120px;
 }
 
 #contenuZombieGirl {
-    top: -21px;
     left: 0px;
+    top: -21px;
 }
 
 /*ZOMBIE POELE*/
 #containerZombiePoele {
-    top: 48%;
-    left: 1850px;
-    height: 184px;
-    width: 153px;
-    overflow: hidden;
     display: none;
+    height: 184px;
+    left: 1850px;
+    overflow: hidden;
+    top: 48%;
+    width: 153px;
 }
 
 #contenuZombiePoele {
-    top: -13px;
     left: 5px;
+    top: -13px;
 }
 
 /*ZOMBIE MOMIE*/
 #containerZombieMomie {
-    top: 57%;
-    left: 2000px;
-    height: 185px;
-    width: 140px;
-    overflow: hidden;
     display: none;
+    height: 185px;
+    left: 2000px;
+    overflow: hidden;
+    top: 57%;
+    width: 140px;
 }
 
 #contenuZombieMomie {
-    top: -9px;
     left: -42px;
+    top: -9px;
 }
 
 /*ZOMBIE FRANKENSTEIN*/
 #containerZombieFrank {
     /* border: 2px solid pink; */
-    top: 52%;
-    left: 2800px;
-    height: 178px;
-    width: 116px;
-    overflow: hidden;
     display: none;
+    height: 178px;
+    left: 2800px;
+    overflow: hidden;
+    top: 45%;
+    width: 116px;
 }
 
 #contenuZombieFrank {
-    top: -12px;
     left: -50px;
+    top: -12px;
 }
 
 /*ZOMBIE BOY*/
 #containerZombieBoy {
     /* border: 2px solid green; */
-    top: 61%;
-    left: 2300px;
-    height: 186px;
-    width: 146px;
-    overflow: hidden;
     display: none;
+    height: 186px;
+    left: 2300px;
+    overflow: hidden;
+    top: 61%;
+    width: 146px;
 }
 
 #contenuZombieBoy {
-    top: -13px;
     left: -46px;
+    top: -13px;
 }
 
 /*SCORE*/
 
 #score {
-    display: flex;
     align-items: center;
-    flex-wrap: nowrap;
-    color: #ffff;
-    font-weight: bold;
-    width: 300px;
-    margin: auto;
-    justify-content: space-between;
     border-radius: 10px;
+    color: #ffff;
+    display: flex;
+    display: none;
+    flex-wrap: nowrap;
+    font-weight: bold;
+    justify-content: space-between;
+    margin: auto;
     padding-left: 20px;
     padding-right: 20px;
     text-align: center;
-    display: none;
+    width: 300px;
 }
 
 h4,
@@ -390,69 +394,67 @@ h4,
     left: 0;
     width: 100%;
     height: 100%;
-    opacity: 0.8;
     background: black;
 }
 
 #zomb {
-    position: absolute;
     display: none;
-    top: 11%;
     left: 30%;
+    position: absolute;
+    top: 3%;
 }
 
 a#boutonAccueil {
-    font-family: 'Kalam', cursive;
-    position: absolute;
-    display: none;
-    text-decoration: none;
-    color: red;
-    font-size: 30px;
     background-color: green;
     border-radius: 20px;
     border: 2px solid red;
-    top: 72%;
+    color: red;
+    display: none;
+    font-family: 'Kalam', cursive;
+    font-size: 30px;
     left: 44%;
     padding-top: 3px;
     padding-bottom: 3px;
     padding-left: 40px;
     padding-right: 40px;
+    position: absolute;
+    text-decoration: none;
+    top: 58%;
 }
 
 
 /* YOU WIN */
 #gameWin {
-    position: absolute;
-    display: none;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0.8;
     background: black;
+    display: none;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
 }
 
 #zombWin {
-    position: absolute;
     display: none;
-    top: 11%;
     left: 30%;
+    position: absolute;
+    top: 3%;
 }
 
 a#boutonCV {
-    font-family: 'Kalam', cursive;
-    position: absolute;
-    display: none;
-    text-decoration: none;
-    color: red;
-    font-size: 30px;
     background-color: green;
     border-radius: 20px;
     border: 2px solid red;
-    top: 49%;
+    color: red;
+    display: none;
+    font-family: 'Kalam', cursive;
+    font-size: 30px;
     left: 44%;
+    position: absolute;
     padding-top: 3px;
     padding-bottom: 3px;
     padding-left: 40px;
     padding-right: 40px;
+    text-decoration: none;
+    top: 43%;
 }

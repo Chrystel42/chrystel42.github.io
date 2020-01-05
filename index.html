@@ -3,13 +3,15 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
     <link href="https://fonts.googleapis.com/css?family=Solway&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Kalam:700|Righteous&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kalam:700%7CRighteous&display=swap" rel="stylesheet">
 
     <title>Chrystel Alinc</title>
 </head>
-
+<!------------------------------Jeu optimal sur un écran de 17"------------------------------>
 <body>
     <!--BROUILLARD-->
     <img src="./images/mist.png" alt="brume" id="mist">
@@ -29,7 +31,6 @@
                     <li><a href="#" id="menuAccueil">Accueil</a></li>
                     <li><a href="#" id="regles">Règles</a></li>
                     <li><a href="cv-chrystel-alinc.pdf" id="voirCv">Mon CV</a></li>
-                    <!-- <li><a href="#" id="contact">Me contacter</a></li> -->
                 </ul>
             </nav>
 
@@ -37,44 +38,44 @@
 
         <!--COMPETENCES-->
         <div id="competences">
-            <img src="images/angular.png" id="angular">
-            <img src="images/javascript.png" id="javascript">
-            <img src="images/html5.png" id="html5">
-            <img src="images/css3.png" id="css3">
-            <img src="images/mongodb.png" id="mongodb">
-            <img src="images/meteor.png" id="meteor">
-            <img src="images/nodejs.png" id="nodejs">
+            <img src="images/angular.png" id="angular" alt="logo angular">
+            <img src="images/javascript.png" id="javascript" alt="logo javascript">
+            <img src="images/html5.png" id="html5" alt="logo html5">
+            <img src="images/css3.png" id="css3" alt="logo css">
+            <img src="images/mongodb.png" id="mongodb" alt="logo mongodb">
+            <img src="images/meteor.png" id="meteor" alt="logo meteor">
+            <img src="images/nodejs.png" id="nodejs" alt="logo nodejs">
         </div>
 
         <!--BLOC INSTRUCTON-->
         <div id="instruction">
-            <img src="images/blood.png" id="blood">
+            <img src="images/blood.png" id="blood" alt="tache de sang">
             <p id="intro"><span class="bonjour">Bonjour et bienvenue sur mon jeu !</span><br>
                 <br>Je suis Chrystel Alinc, développeuse Full Stack JS junior, et ceci est mon premier projet.
-                Découvrez-moi à travers mon jeu rempli de zombies ! La règle est simple : 
-                A chaque zombie tué, vous gagnerez 50 points. Tous les 150 points, vous débloquerez une compétence. Au bout de 1100 points vous pourrez accèder à mon CV complet. <br>
+                Découvrez-moi à travers mon jeu rempli de zombies ! La règle est simple :
+                A chaque zombie tué, vous gagnerez 50 points. Tous les 150 points, vous débloquerez une compétence. Au
+                bout de 1100 points vous pourrez accèder à mon CV complet. <br>
                 Voici quelques consignes pour mener à bien votre mission :<br>
                 Utilisez les touches de direction <span class="fleche">droite</span>, <span
-                    class="fleche">gauche</span>, <span class="fleche">haut</span> et <span class="fleche">bas</span> pour vous diriger.<br>
-                Utilisez la touche <span class="fleche">Entrée</span> pour tuer les zombies à coup de
-                hache.<br>
-                
-                <span class="jouer">A vous de jouer !</span>
-            </p>
-            <div class="bouton1">
+                    class="fleche">gauche</span>, <span class="fleche">haut</span> et <span class="fleche">bas</span>
+                pour vous diriger.<br>
+                Utilisez la touche <span class="fleche">Espace</span> pour tuer les zombies à coup de
+                hâche.<br>
+
+                <span class="jouer">A vous de jouer !</span><br>
                 <p><a href="#" id="bouton">PLAY</a></p>
-            </div>
         </div>
 
         <!--BLOC REGLES DU JEU-->
         <div id="reglesDuJeu">
-            
+            <a href="#"><img src="images/bones.png" id="fermer" alt="croix de fermeture"></a>
+
             <p id="regleJeu"><span class="titreJeu">Zombies vs CrazyRedneck </span><br>
                 <br><br>
                 Touches directionnelles :<br>
                 Touche <span class="fleche">droite</span> : pour vous diriger vers la droite.<br>
                 Touche <span class="fleche">gauche</span> : pour vous diriger vers la gauche.<br>
-                Pressez 1 fois la touche <span class="fleche">Entrée</span> : pour 1 coup de hâche.<br>
+                Pressez 1 fois la touche <span class="fleche">Espace</span> : pour 1 coup de hâche.<br>
                 <br>
                 Score :<br>
                 1 zombie tué = 50 points<br>
@@ -82,36 +83,37 @@
                 1100 pts = Vous gagnez !<br>
                 Si 1 zombie sort de l'écran, vous avez perdu !
             </p>
-            
+
         </div>
 
         <!--SPRITE REDNECK-->
         <div id="container" class="masque">
-            <img src="images/redneck.png" id="contenu" class="sprite" />
+            <img src="images/redneck.png" id="contenu" class="sprite" alt="image du redneck">
         </div>
 
         <!--SPRITE ZOMBIE FILLE-->
         <div id="containerZombieGirl" class="masqueGirl">
-            <img src="images/zombie-girl2.png" id="contenuZombieGirl" class="spriteGirl">
+            <img src="images/zombie-girl2.png" id="contenuZombieGirl" class="spriteGirl" alt="image de la zombie fille">
         </div>
 
         <!--SPRITE ZOMBIE BOY-->
         <div id="containerZombieBoy" class="masqueBoy">
-            <img src="images/zombie-boy.png" id="contenuZombieBoy" class="spriteBoy">
+            <img src="images/zombie-boy.png" id="contenuZombieBoy" class="spriteBoy" alt="image du zombie garçon">
         </div>
         <!--SPRITE ZOMBIE CASSEROLE-->
         <div id="containerZombiePoele" class="masquePoele">
-            <img src="images/zombie-poele.png" id="contenuZombiePoele" class="spritePoele">
+            <img src="images/zombie-poele.png" id="contenuZombiePoele" class="spritePoele"
+                alt="image du zombie avec poele">
         </div>
 
         <!--SPRITE ZOMBIE MOMIE-->
         <div id="containerZombieMomie" class="masqueMomie">
-            <img src="images/zombie-momie.png" id="contenuZombieMomie" class="spriteMomie">
+            <img src="images/zombie-momie.png" id="contenuZombieMomie" class="spriteMomie" alt="image du zombie momie">
         </div>
 
         <!--SPRITE ZOMBIE FRANKENSTEIN-->
         <div id="containerZombieFrank" class="masqueFrank">
-            <img src="images/zombie-frank.png" id="contenuZombieFrank" class="spriteFrank">
+            <img src="images/zombie-frank.png" id="contenuZombieFrank" class="spriteFrank" alt="image du zombie franck">
         </div>
         <!--GAME OVER-->
 
@@ -120,7 +122,7 @@
             <img id="zomb" src="images/game-over.png" alt="game over">
         </div>
         <p><a href="#" id="boutonAccueil">ACCUEIL</a></p>
-    
+
 
         <!--YOU WIN-->
         <div id="gameWin"></div>
@@ -128,10 +130,11 @@
             <img id="zombWin" src="images/you-win.png" alt="you win">
         </div>
         <p><a href="#" id="boutonCV">Voir mon CV</a></p>
-        
-    </div>
 
+    </div>
+    <script src="js/general.js"></script>
+    <script src="js/jeu-zombie.js"></script>
 </body>
-<script src="js/zombie.js"></script>
+
 
 </html>
